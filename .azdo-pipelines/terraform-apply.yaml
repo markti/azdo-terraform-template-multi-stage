@@ -26,6 +26,7 @@ jobs:
       BACKEND_STORAGE_ACCOUNT_NAME: $(BACKEND_STORAGE_ACCOUNT_NAME)
       BACKEND_STORAGE_CONTAINER_NAME: $(BACKEND_STORAGE_CONTAINER_NAME)
       TF_BACKEND_KEY: $(ApplicationName)-$(EnvironmentName)
+      TF_VAR_application_name: $(ApplicationName)
 
   - task: Bash@3
     displayName: "terraform apply"
@@ -42,3 +43,4 @@ jobs:
       BACKEND_STORAGE_ACCOUNT_NAME: $(BACKEND_STORAGE_ACCOUNT_NAME)
       BACKEND_STORAGE_CONTAINER_NAME: $(BACKEND_STORAGE_CONTAINER_NAME)
       TF_BACKEND_KEY: $(ApplicationName)-$(EnvironmentName)
+      TF_VAR_application_name: $(ApplicationName)

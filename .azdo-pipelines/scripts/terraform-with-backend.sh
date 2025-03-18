@@ -11,4 +11,4 @@ terraform init \
   -backend-config="container_name=$BACKEND_STORAGE_CONTAINER_NAME" \
   -backend-config="key=$TF_BACKEND_KEY"
 
-terraform $1 $2 $3
+terraform $*
